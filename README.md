@@ -44,10 +44,11 @@
 # Типичный жизненный цикл файла в Git
 
 ```mermaid
-  graph TD;
-      A[untracked] -->|git add|B[staged ("в списке на коммит") +tracked];
-      B -->|git commit| C[tracked("отслеживаемый")];
-      C -->|"изменения"| D[modified("измененный")];
-      D -->|git add| B;
-      B -->|"изменения"| D;
+graph TD;
+    A[Untracked] -->|git add| B[Staged <br/>(в списке на коммит) +tracked];
+    B -->|git commit| C[Tracked <br/>(отслеживаемый)];
+    C -->|"Изменения"| D[Modified <br/>(изменённый)];
+    D -->|git add| B;
+    B -->|"Изменения"| D;
+
 ```
