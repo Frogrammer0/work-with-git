@@ -45,10 +45,15 @@
 
 ```mermaid
 graph TD;
-    A[Untracked] -->|git add| B[Staged <br/>(в списке на коммит) +tracked];
-    B -->|git commit| C[Tracked <br/>(отслеживаемый)];
-    C -->|"Изменения"| D[Modified <br/>(изменённый)];
+    A[Untracked] -->|git add| B[Staged and Tracked];
+    B -->|git commit| C[Tracked];
+    C -->|изменения| D[Modified];
     D -->|git add| B;
-    B -->|"Изменения"| D;
+    B -->|изменения| D;
 
 ```
+
+*Untracked* – файл не отслеживается Git
+*Staged and Tracked* – файл добавлен в индекс
+*Tracked* – файл закоммичен
+*Modified* – файл изменён, но не добавлен в индекс
