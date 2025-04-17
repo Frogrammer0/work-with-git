@@ -45,9 +45,9 @@
 
 ```mermaid
   graph TD;
-      A[untracked] -->|git add|B[staged (в списке на коммит) +tracked];
-      B -->|git commit| C[tracked(отслеживаемый)];
-      C -->|изменения| D[modified(измененный)];
+      A[untracked] -->|git add|B[staged ("в списке на коммит") +tracked];
+      B -->|git commit| C[tracked("отслеживаемый")];
+      C -->|"изменения"| D[modified("измененный")];
       D -->|git add| B;
-      B -->|изменения| D;
+      B -->|"изменения"| D;
 ```
